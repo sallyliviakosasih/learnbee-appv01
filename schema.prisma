@@ -14,16 +14,20 @@ model User {
  id     String     @id @default(cuid())
  name   String
  email  String      @unique
+ password   String
  posts  Post[]
 }
 
 
 model Post {
- id         String      @id @default(cuid())
- title      String
- content    String?
- categories String
- published  Boolean     @default(false)
- author     User?       @relation(fields: [authorId], references: [id])
- authorId   String?
+ id           String      @id @default(cuid())
+ title        String
+ content      String?
+ image_url    String?
+ categories   String
+ published    Boolean     @default(false)
+ author       User?       @relation(fields: [authorId], references: [id])
+ authorId     String?
+ createdAt    DateTime  @default(now()) @map(name: "created_at")
+ updatedAt    DateTime  @updatedAt @map(name: "updated_at")
 }
