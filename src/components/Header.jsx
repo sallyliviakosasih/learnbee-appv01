@@ -55,10 +55,50 @@ export default function Header ({isLogged}) {
                                 </Modal>
 
                         </div>
-                        <Modal isOpen={modalLoginIsOpen} onRequestClose={toogleModalLogin} contentLabel="Pop Up Form">
-                            {/* form login */}
-                            <Loginform />
-                        </Modal>
+                        {/* <Modal isOpen={modalLoginIsOpen} onRequestClose={toogleModalLogin} contentLabel="Pop Up Form">
+                            <div className='bg-white flex flex-col items-center justify-center'>
+                                    <Image className='mx-auto'
+                                        src={'/logo/beeOnly.svg'}
+                                        alt='Logo Learn Bee'
+                                        width={67}
+                                        height={68} />
+                                    <Image className='mx-auto my-2'
+                                        src={'/logo/textOnly.svg'}
+                                        alt='Logo 2 Learn Bee'
+                                        width={139}
+                                        height={23} />
+                                    <h2 className='text-center font-serif font-medium text-contrast text-3xl my-4'>Masuk</h2>
+                                    <form className='my-5'>
+                                        <label className='block my-2'>Email USU Mahasiswa</label>
+                                        <input type='text' className='w-full border-b-2'></input>
+                                        <label className='block my-2'>Kata Sandi</label>
+                                        <input type='text' className='w-full border-b-2'></input>
+                                    </form>
+                                    <button className='bg-primary-yellow text-contrast px-4 py-2 rounded-full block mx-auto my-16'>Masuk</button>
+                                </div> 
+                        </Modal> */}
+                        {/* <div className='fixed flex top-0 left-0 right-0 h-full z-10 bg-dark-muted/50 items-center justify-center' id='loginPopUpBg' tabIndex={-1}>
+                                <div className='bg-white relative rounded-lg p-12 w-4/12' id='loginFormContianer'>
+                                    <Image className='mx-auto'
+                                        src={'/logo/beeOnly.svg'}
+                                        alt='Logo Learn Bee'
+                                        width={67}
+                                        height={68} />
+                                    <Image className='mx-auto my-2'
+                                        src={'/logo/textOnly.svg'}
+                                        alt='Logo 2 Learn Bee'
+                                        width={139}
+                                        height={23} />
+                                    <h2 className='text-center font-serif font-medium text-contrast text-3xl my-4'>Masuk</h2>
+                                    <form className='my-5'>
+                                        <label className='block my-2'>Email USU Mahasiswa</label>
+                                        <input type='text' className='w-full border-b-2'></input>
+                                        <label className='block my-2'>Kata Sandi</label>
+                                        <input type='text' className='w-full border-b-2'></input>
+                                    </form>
+                                    <button className='bg-primary-yellow text-contrast px-4 py-2 rounded-full block mx-auto my-16'>Masuk</button>
+                                </div>
+                            </div> */}
                         </>
                     }
                     {isLogged &&
