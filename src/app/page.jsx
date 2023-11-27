@@ -7,7 +7,7 @@ async function getPost() {
     where: {published: true},
     include:{
       author: {
-        select: {name: true}
+        select: {nama: true}
       }
     }
   })
@@ -40,7 +40,7 @@ export default async function Home() {
               content={post.content}
               images={post.images_url}
               waktu={post.createdAt[0]}
-              authorName={post.author.name}
+              authorName={post.author.nama}
               jurusan={"Ilmu Komputer"}
               stambuk={"2020"}
               votes={"100"}
