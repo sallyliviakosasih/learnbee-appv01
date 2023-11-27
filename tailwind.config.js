@@ -15,6 +15,7 @@ module.exports = {
     },
     colors: {
       'primary-yellow': '#FEDE3E',
+      'text-color': '#3c3c3c',
       'mid-muted': '#F8F8F8',
       'dark-muted': '#B9B9B9',
       'darker-muted': '#6F6F6F',
@@ -23,7 +24,7 @@ module.exports = {
       'black': 'black',
       'white': 'white',
       'grey': '#ECEEF7',
-      'transparent': 'transparent'
+      'transparent': 'transparent',
     }
   },
   plugins: [],
