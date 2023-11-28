@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from "next/image";
 import prisma from '../../lib/prisma';
+import { setSession } from '@/app/api/session/route';
 
 function Loginform({formAction}) {
   const [inputLoginEmail, setInputLoginEmail] = useState('');
@@ -11,13 +12,19 @@ function Loginform({formAction}) {
   const handleSubmitLogin = async () => {
     try{
       const response = await fetch('/api/signin', {
-        method:  "GET",
+        method:  "POST",
         headers:{
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({inputLoginEmail, inputLoginPassword})
+        body: JSON.stringify({inputLoginEmail, inputLoginPassword}),
       })
-      {console.log(response)};
+      if(response.status == 200) {
+        alert("Berhasil Login");
+        setSession("01", true);
+
+      } else {
+        alert("Gagal Login, Mohon periksa kembali Email dan password anda")
+      }
     } catch(err){console.log(err)};
   }
 

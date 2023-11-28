@@ -3,13 +3,17 @@ import React from 'react'
 function page() {
   return (
     <div>
-        <div class="container px-28 my-10">
+        <div class="container my-10">
             <h1 class="text-text-color text-3xl font-bold">Ajukan Pertanyaan</h1>
             <div class="grid grid-cols-3 grid-rows-3 gap-3"> 
-            
-                <div class="bg-primary-yellow p-4 rounded-md row-span-3 col-span-2">
-                  <p class="text-black">Judul</p>
+                <div className="p-4 rounded-md row-span-3 col-span-2">
+                  <p className="text-black m-2">Judul</p>
+                  <input type='text' className='w-full p-2 border border-black rounded-lg' placeholder='Masukan Judul'></input>
+                  <p className='text-black m-2'>Detail Permasalahan Anda:</p>
+                  <textarea placeholder='Deskripsikan permaslahan' className='w-full h-36 border border-black p-2 rounded-lg'></textarea>
+                  <button className='m-4 rounded-xl bg-primary-yellow p-2' >Tambah Pertanyaan</button>
                 </div>
+                
 
                 <div class="bg-[#eceef7] p-6 rounded-md ">
                     <div class="text-[#637c8a]">
